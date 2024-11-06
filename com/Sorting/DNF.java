@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class DNF {
     public static void main(String[] args) {
         int[] arr = {2,0,2,1,1,0};
-        DNF(arr);
+        DNF_sort(arr);
         System.out.println(Arrays.toString(arr)); // [0, 0, 1, 1, 2, 2]
     }
 
-    public static void DNF(int[] arr) {
+    public static void DNF_sort(int[] arr) {
         int low = 0;
         int mid = 0;
         int high = arr.length - 1;

@@ -23,7 +23,7 @@ public class MergeIntervals {
 
         for(int[] inter : intervals) {
             // see image 1
-            int current_begin = current_interval[0];
+            //int current_begin = current_interval[0];
             int current_end = current_interval[1];
             int next_begin = inter[0];
             int next_end = inter[1];

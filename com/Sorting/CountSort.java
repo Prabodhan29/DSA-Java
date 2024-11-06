@@ -19,8 +19,8 @@ public class CountSort {
         int[] frequency_arr = new int[largest_number + 1];
 
         // fill the frequency_arr with zero
-        for(int ele : frequency_arr) {
-            ele = 0;
+        for(int i=0; i<frequency_arr.length; i++) {
+            frequency_arr[i] = 0;
         }
 
         // store the count of each element at its respective index number

@@ -44,8 +44,6 @@ public class MajorityElement {
 
     public static int majorityElement2(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        int count = 0;
-
         for(int i=0; i<nums.length; i++) {
 
             // if the map does not contain nums[i], the add that element.

@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package com.Arrays;
+
 import java.util.HashSet;
 
 public class IsSubsetOrNot {
@@ -8,8 +9,6 @@ public class IsSubsetOrNot {
         isSubset(arr1, arr2);
     }
     public static void isSubset(int[] a1, int[] a2) {
-        String ans = "yes";
-
         HashSet<Integer> nums = new HashSet<>();
         for(int x1 : a1) {
             nums.add(x1);

@@ -1,7 +1,5 @@
 package com.String;
 
-import java.util.Arrays;
-
 public class LengthOfStringAfterDeletingSimilarEnds {
     public static void main(String[] args) {
         String s = "aabccabba";

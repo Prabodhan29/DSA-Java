@@ -13,7 +13,7 @@ public class ValidParenteses {
             return false;
         }
 
-        Stack<Character> stack = new Stack();
+        Stack<Character> stack = new Stack<>();
         for(char c:s.toCharArray()) {
             if(c == '(' || c == '{' || c == '[') {
                 stack.push(c);

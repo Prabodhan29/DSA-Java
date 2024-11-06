@@ -3,42 +3,41 @@ package com.BinarySearch;
 public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {-1,0,3,5,9,12};
-        int[] rev_arr = {12,9,5,3,0,-1};
         int target = 9;
         System.out.println(binarySearch(arr, target)); // 4
-        System.out.println(binarySearch(rev_arr, target)); // 1
+        System.out.println(bs_recursive(arr, target, 0, arr.length-1)); // 4
     }
 
-    private static int binarySearch(int[] arr, int target) {
-        boolean isAscending;
-        isAscending = arr[0] < arr[arr.length - 1];
-
+    private static int binarySearch(int[] arr, int target) {    
         int start = 0;
-        int end = arr.length-1;
+        int end = arr.length - 1;
 
         while(start <= end) {
-            int mid = start + (end-start)/2;
-            if(arr[mid] == target) {
+            int mid = start + (end - start) / 2;
+            if(arr[mid] == target) 
                 return mid;
-            }
-            else {
-                if(isAscending) {
-                    if(arr[mid] < target) {
-                        start = mid + 1;
-                    }
-                    else {
-                        end = mid - 1;
-                    }
-                }
-                else {
-                    if(arr[mid] < target) {
-                        end = mid - 1;
-                    }
-                    else {
-                        start = mid + 1;
-                    }
-                }
-            }
+            
+            if(arr[mid] > target) 
+                end = mid - 1;
+                
+            else 
+                start = mid + 1;
+        }
+        return -1;
+    }
+
+    // Recursive binary search 
+    private static int bs_recursive(int[] arr, int target, int start, int end) {
+        if(start <= end) {
+            int mid = start + (end - start) / 2;
+            if(arr[mid] == target) 
+                return mid;
+
+            if(arr[mid] > target) 
+                return bs_recursive(arr, target, start, mid-1);
+            
+            else 
+                return bs_recursive(arr, target, mid+1, end);
         }
         return -1;
     }

@@ -1,3 +1,5 @@
+package com.Arrays;
+
 import java.util.ArrayList;
 
 public class CommonElements {
